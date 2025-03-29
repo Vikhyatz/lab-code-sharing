@@ -1,6 +1,6 @@
 "use client"
-import DeleteModal from '@/app/components/deleteModal'
-import SaveCheck from '@/app/components/saveCheck'
+import DeleteModal from '@/app/components/DeleteModal'
+import SaveCheck from '@/app/components/SaveCheck'
 import { redirect, useParams } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'

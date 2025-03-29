@@ -1,5 +1,5 @@
 "use client"
-import SaveCheck from '@/app/components/saveCheck'
+import SaveCheck from '@/app/components/SaveCheck'
 import React, { useEffect, useRef, useState } from 'react'
 
 const Page = () => {

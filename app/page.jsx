@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import Card from "./components/card";
+import Card from "./components/Card";
 import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 
