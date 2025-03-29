@@ -27,6 +27,7 @@ const Page = () => {
             <section className="text-gray-400 bg-gray-900 body-font relative">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="lg:w-1/2 md:w-2/3 mx-auto">
+                <h1 className='text-center text-3xl text-white mb-[30px]'>Create New Code</h1>
                         <div className="flex flex-wrap -m-2">
                             <div className="p-2 w-full">
                                 <div className="relative">
