@@ -13,7 +13,7 @@ export async function GET(request) {
         const saveCode = await code.create(
             { codeHeading: codeHeading, code: codeContent }
         )
-        console.log(saveCode);
+        // console.log(saveCode);
 
         return new Response(JSON.stringify({ messageg: "authorised and saved" }), { status: 200 });
     } else {

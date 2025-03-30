@@ -51,6 +51,7 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state }) => {
 
     return (
         <>
+        
         <div><Toaster/></div>
         <div className='bg-[#000000c6] w-full h-screen overflow-hidden fixed top-0 left-0 flex justify-center items-center' onClick={handleModalClose}>
             <form onSubmit={handleSubmit} onClick={(e) => { e.stopPropagation() }} className='w-[50%] h-[200px] border-2 border-[#747474] border-solid bg-black rounded-[10px] flex justify-center items-center flex-col '>
