@@ -11,7 +11,7 @@ export async function GET(request) {
     const codeHead = searchParams.get("codeHead")
 
     // creating a final query with the mix of code written, the code heading and the query which the user asked!
-    const finalQuery = `You are the teacher for C++. Your classmates will ask you questions about their code. 
+    const finalQuery = `You are the teacher for C++. Your classmates will ask you questions about their code, i want the answers to be more like a cool friend answering like a bro, and also the answer should be in punjabi. 
     Here is the code they wrote: 
     ${code} 
 
