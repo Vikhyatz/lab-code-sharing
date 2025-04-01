@@ -37,9 +37,11 @@ export default function Home() {
               Copy-Paste your code here!!
             </h1>
           </div>
-          <div className="flex flex-wrap -m-4 justify-center">
+          <div className="flex flex-wrap sm:flex-row flex-col m-auto justify-center">
             {!Array.isArray(cards) ? (
-              "Loading..."
+              <div className="sm:flex sm:items-center">
+                <h1 className="text-center">loading...</h1>
+              </div>
             ) : (
               cards.map((elem, index) => (
                 <Card codeHeading={elem.codeHeading} key={index} />

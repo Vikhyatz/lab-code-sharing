@@ -106,14 +106,14 @@ const Page = () => {
                                     <div className="p-2 w-full">
                                         <div className="relative">
                                             <label htmlFor="heading" className="leading-7 text-sm text-gray-400">heading</label>
-                                            <input type="text" id="heading" name="heading" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-2xl outline-none text-gray-100 py-5 px-5 leading-8 transition-colors text-center duration-200 ease-in-out" autoComplete='off' value={codeContent.codeHeading} ref={inpRef} onChange={inpChange} disabled={modal && true} />
+                                            <input type="text" id="heading" name="heading" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-xl outline-none text-gray-100 py-5 px-5 leading-8 transition-colors text-center duration-200 ease-in-out" autoComplete='off' value={codeContent.codeHeading} ref={inpRef} onChange={inpChange} disabled={modal && true} />
                                         </div>
                                     </div>
 
                                     <div className="p-2 w-full">
                                         <div className="relative">
                                             <label htmlFor="code" className="leading-7 text-sm text-gray-400">code</label>
-                                            <textarea id="code" name="code" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 min-h-32 text-xl outline-none text-gray-100 py-3 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out field-sizing-content" spellCheck="false" disabled={modal && true} value={codeContent.code} onChange={textAreaChange} ref={textAreaRef}></textarea>
+                                            <textarea id="code" name="code" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 min-h-32 text-l outline-none text-gray-100 py-3 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out field-sizing-content" spellCheck="false" disabled={modal && true} value={codeContent.code} onChange={textAreaChange} ref={textAreaRef}></textarea>
                                         </div>
                                     </div>
                                     <div className="p-2 w-full">
