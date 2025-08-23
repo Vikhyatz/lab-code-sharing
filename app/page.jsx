@@ -4,6 +4,7 @@ import Card from "./components/Card";
 import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { motion } from 'motion/react'
+import GlobalNavWrapper from "./components/GlobalNavWrapper";
 
 export default function Home() {
   const [cards, setCards] = useState();
@@ -13,7 +14,7 @@ export default function Home() {
       const response = await fetch("/api/fetchCodes");
       const data = await response.json();
       console.log(data);
-      setCards(data.allCodes)
+      setCards(data.firstYear)
     }
     fetchCodes();
   }, [])
@@ -29,14 +30,7 @@ export default function Home() {
     >
       <section className="text-gray-400 bg-gray-900 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
-          <div className="flex flex-col text-center w-full mb-20">
-            <h2 className="text-2xl sm:text-3xl text-indigo-400 tracking-widest font-medium title-font mb-1">
-              G2 WALLEEEEEEEEE
-            </h2>
-            <h1 className="text-xl sm:text-2xl font-medium title-font text-white">
-              Copy-Paste your code here!!
-            </h1>
-          </div>
+          <GlobalNavWrapper subHead="Copy-Paste your code here!!"/>
           <div className="flex flex-wrap sm:flex-row flex-col m-auto justify-center">
             {!Array.isArray(cards) ? (
               <div className="sm:flex sm:items-center">
