@@ -11,8 +11,14 @@ const GlobalNavWrapper = ({ head, subHead }) => {
                         {head}
                     </h2>
                 ) : (
-                    <h2 className="text-2xl sm:text-3xl text-indigo-400 tracking-widest font-medium title-font mb-1"><Link href="/second">G</Link>
-                        <Link href="/second" className="text-emerald-400">2</Link> WALLEEEEEEEEE
+                    <h2 className="text-2xl sm:text-3xl text-indigo-400 tracking-widest font-medium title-font mb-1">
+                        <span
+                            onClick={()=>(window.open('https://youtu.be/dQw4w9WgXcQ?si=pPbJn-mQT9UdNYZ_', '_blank'))}
+                        >G</span>
+                        <Link href="/second" className="text-emerald-400" prefetch>2</Link>
+                        <span
+                            onClick={()=>(window.open('https://youtu.be/dQw4w9WgXcQ?si=pPbJn-mQT9UdNYZ_', '_blank'))}
+                        >WALLEEEEEEEEE</span>
                     </h2>
                 )
             }

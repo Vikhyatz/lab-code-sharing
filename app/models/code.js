@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const codeSchema = mongoose.Schema({
     codeHeading: {type: String, unique: true},
-    code: String,
+    code: { type: String, required: true },
     lang: { type: String, required: false },
 })
 
