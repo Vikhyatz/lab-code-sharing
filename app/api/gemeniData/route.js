@@ -25,7 +25,6 @@ export async function GET(request) {
         model: "gemini-2.0-flash",
         contents: finalQuery,
     });
-    // console.log(response.text);
 
     const convertedText = marked.parse(response.text)
 

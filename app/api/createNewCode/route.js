@@ -5,7 +5,6 @@ export async function POST(request) {
     connectDb();
 
     const body = await request.json();
-    console.log(body)
     const { key, lang, codeContent, codeHeading } = body;
 
 

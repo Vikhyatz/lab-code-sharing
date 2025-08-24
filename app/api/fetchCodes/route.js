@@ -6,7 +6,6 @@ export async function GET(request) {
 
     const searchParams = request.nextUrl.searchParams;
     const lang = searchParams.get('lang');
-    console.log(lang)
 
     const allCodes = await code.find();
 

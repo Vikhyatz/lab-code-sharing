@@ -13,7 +13,7 @@ export default function Home() {
     const fetchCodes = async () => {
       const response = await fetch("/api/fetchCodes");
       const data = await response.json();
-      console.log(data);
+      (data);
       setCards(data.firstYear)
     }
     fetchCodes();

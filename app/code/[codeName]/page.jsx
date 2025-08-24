@@ -34,7 +34,6 @@ const Page = () => {
             const data = await response.json();
 
             setCodeCheckRes(response.status)
-            console.log(data.findCode)
             setCodeContent({ codeHeading: data.findCode.codeHeading, code: data.findCode.code, id: data.findCode._id })
         }
         checkValidCode();
@@ -102,7 +101,7 @@ const Page = () => {
                     <section className="text-gray-400 bg-gray-900 body-font relative">
                         <div className="container px-5 pt-24 pb-10 mx-auto">
                             <div className="lg:w-1/2 md:w-2/3 mx-auto">
-                                <form onSubmit={(e) => { e.preventDefault(); setModal(!modal); console.log(codeContent) }} className="flex flex-wrap -m-2">
+                                <form onSubmit={(e) => { e.preventDefault(); setModal(!modal); }} className="flex flex-wrap -m-2">
                                     <div className="p-2 w-full">
                                         <div className="relative">
                                             <label htmlFor="heading" className="leading-7 text-sm text-gray-400">heading</label>

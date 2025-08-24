@@ -26,7 +26,6 @@ const Chat = ({ code, codeHead }) => {
 
         const response = await fetch(`/api/gemeniData?code=${encodeURIComponent(code)}&codeHead=${codeHead}&query=${query}`)
         const data = await response.json();
-        console.log(data)
 
         setMessages((prev) => {
             return [...prev, { content: data.message, state: "recieved" }]

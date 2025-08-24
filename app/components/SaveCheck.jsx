@@ -12,7 +12,6 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
 
         if (state == "creating") {
             if (year == 'second') {
-                console.log(lang)
                 // if it is the second year then take the language name and store it with the code content (divided into different languages)
                 const response = await fetch('/api/createNewCode', {
                     method: 'POST',
@@ -27,7 +26,6 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
                     }),
                 });
                 const data = await response.json();
-                console.log(data, response.status);
 
                 if (response.ok) {
                     toast.success('code saved!')
@@ -43,7 +41,6 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
                 // check key and create a new code
                 const response = await fetch(`/api/createNewCode?key=${ref.current.value}&codeHeading=${codeHeading}&code=${encodeURIComponent(code)}`);
                 const data = await response.json();
-                console.log(data, response.status);
 
                 if (response.ok) {
                     toast.success('code saved!')
@@ -61,7 +58,6 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
             // check key and update the code
             const response = await fetch(`/api/checkKey?key=${ref.current.value}&id=${id}&codeHeading=${codeHeading}&code=${encodeURIComponent(code)}`);
             const data = await response.json();
-            console.log(data, response.status);
             if (response.ok) {
                 toast.success('code saved!')
             } else {

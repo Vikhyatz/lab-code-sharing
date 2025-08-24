@@ -12,7 +12,7 @@ const DeleteModal = ({ id, setDeleteModal, year, lang }) => {
 
         const response = await fetch(`/api/deleteCode?id=${id}&key=${ref.current.value}`);
         const data = await response.json();
-        console.log(data)
+        
         if (response.ok) {
             toast.success("code deleted")
         } else {
