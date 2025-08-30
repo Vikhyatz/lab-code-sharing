@@ -51,9 +51,9 @@ const Page = () => {
     const handleHamClick = () => {
         setHamState(!hamState)
         setTimeout(() => {
-            if(hamState){
+            if (hamState) {
                 window.scrollTo(0, 0);
-            }else{
+            } else {
                 window.scrollTo(0, document.documentElement.scrollHeight);
             }
         }, 500);
@@ -88,9 +88,21 @@ const Page = () => {
                             </h2>
                         </Link>
                         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                            <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-1 md:mt-0" onClick={handleHamClick}>
+                            {/* <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-1 md:mt-0" onClick={handleHamClick}>
                                 {hamState ? <RxCross2 size={30} /> : <h2 className='text-xl'>AI</h2>}
+                            </button> */}
+
+                            <button
+                                className="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-transform duration-200 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group relative animate-rainbow cursor-pointer border-0 bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))] bg-[length:200%] text-foreground [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent] before:absolute before:bottom-[-20%] before:left-1/2 before:z-[0] before:h-[20%] before:w-[60%] before:-translate-x-1/2 before:animate-rainbow before:bg-[linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))] before:[filter:blur(calc(0.8*1rem))] dark:bg-[linear-gradient(#121213,#121213),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))] hover:scale-105 active:scale-95 h-10 px-4 py-2 inline-flex"
+                                onClick={handleHamClick}
+                            >
+                                <div className="flex items-center">
+                                    <span className="ml-1 text-white lg:inline p-1 font-bold">
+                                        {hamState ? <RxCross2 size={30} /> : "Chat With AI"}
+                                    </span>
+                                </div>
                             </button>
+
                         </nav>
                     </div>
                 </header>
