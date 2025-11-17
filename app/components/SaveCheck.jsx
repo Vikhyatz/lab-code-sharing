@@ -20,7 +20,7 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
                     },
                     body: JSON.stringify({
                         key: ref.current.value,
-                        codeHeading,
+                        codeHeading: codeHeading.trim(),
                         codeContent: code,
                         lang,
                     }),
@@ -39,7 +39,7 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
             }
             else {
                 // check key and create a new code
-                const response = await fetch(`/api/createNewCode?key=${ref.current.value}&codeHeading=${codeHeading}&code=${encodeURIComponent(code)}`);
+                const response = await fetch(`/api/createNewCode?key=${ref.current.value}&codeHeading=${codeHeading.trim()}&code=${encodeURIComponent(code)}`);
                 const data = await response.json();
 
                 if (response.ok) {
@@ -56,7 +56,7 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
 
         } else {
             // check key and update the code
-            const response = await fetch(`/api/checkKey?key=${ref.current.value}&id=${id}&codeHeading=${codeHeading}&code=${encodeURIComponent(code)}`);
+            const response = await fetch(`/api/checkKey?key=${ref.current.value}&id=${id}&codeHeading=${codeHeading.trim()}&code=${encodeURIComponent(code)}`);
             const data = await response.json();
             if (response.ok) {
                 toast.success('code saved!')

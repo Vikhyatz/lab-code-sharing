@@ -32,6 +32,7 @@ export default function Home() {
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <GlobalNavWrapper subHead="Copy-Paste your code here!!"/>
           <div className="flex flex-wrap sm:flex-row flex-col m-auto justify-center">
+            
             {!Array.isArray(cards) ? (
               <div className="sm:flex sm:items-center">
                 <h1 className="text-center">loading...</h1>
