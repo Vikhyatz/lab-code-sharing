@@ -29,13 +29,16 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
 
                 if (response.ok) {
                     toast.success('code saved!')
+
+                    setTimeout(() => {
+                        redirect(`/second/${lang}`)
+                    }, 1000);
+
                 } else {
                     toast.error("wrong key");
                 }
 
-                setTimeout(() => {
-                    redirect(`/second/${lang}`)
-                }, 1000);
+                
             }
             else {
                 // check key and create a new code
@@ -44,13 +47,16 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
 
                 if (response.ok) {
                     toast.success('code saved!')
+
+                    setTimeout(() => {
+                        redirect('/')
+                    }, 1000);
+
                 } else {
                     toast.error("wrong key");
                 }
 
-                setTimeout(() => {
-                    redirect('/')
-                }, 1000);
+                
             }
 
 
@@ -60,11 +66,8 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
             const data = await response.json();
             if (response.ok) {
                 toast.success('code saved!')
-            } else {
-                toast.error("wrong key");
-            }
 
-            if (year == 'second') {
+                if (year == 'second') {
                 setTimeout(() => {
                     redirect(`/second/${lang}`)
                 }, 1000);
@@ -73,6 +76,11 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
                     redirect('/')
                 }, 1000);
             }
+            } else {
+                toast.error("wrong key");
+            }
+
+            
 
 
         }
@@ -87,7 +95,7 @@ const SaveCheck = ({ codeHeading, code, id, setModal, state, year, lang }) => {
 
             <div><Toaster /></div>
             <div className='bg-[#000000c6] w-full h-screen overflow-hidden fixed top-0 left-0 flex justify-center items-center' onClick={handleModalClose}>
-                <form onSubmit={handleSubmit} onClick={(e) => { e.stopPropagation() }} className='w-[50%] h-[200px] border-2 border-[#747474] border-solid bg-black rounded-[10px] flex justify-center items-center flex-col '>
+                <form onSubmit={handleSubmit} onClick={(e) => { e.stopPropagation() }} className='w-[90%] h-[200px] border-2 border-[#747474] border-solid bg-black rounded-[10px] flex justify-center items-center flex-col '>
                     <input type="password" placeholder='enter the key!' className='border-2 border-solid border-[#747474] p-3 w-[80%] text-white ' ref={ref} />
 
                     <div className="p-2 w-full">
