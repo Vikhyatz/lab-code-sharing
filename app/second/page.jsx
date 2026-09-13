@@ -49,7 +49,7 @@ export default function Home() {
         >
             <section className="text-gray-400 bg-gray-900 body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
-                    <GlobalNavWrapper subHead="Second Year!!!!"/>
+                    <GlobalNavWrapper subHead="First Year!!!!"/>
                     <div className="flex flex-wrap sm:flex-row flex-col m-auto justify-center">
                       {
                         subjectCards.map((icon, index)=>(
